@@ -24,7 +24,7 @@ cam = dict(
 )
 
 
-for n, (rot, alpha, lw) in enumerate(zip([0, 30, 60, 90], [1, .6, .3, .1], [6, 4, 2, 1])):
+for n, (rot, alpha, lw) in enumerate(zip([0, 30, 60, 90], [1, .6, .3, 6], [6, 4, 3, 0])):
 
     scene = Scene(add_root=False, display_inset=False, use_default_key_bindings=True)
 
@@ -62,7 +62,7 @@ for n, (rot, alpha, lw) in enumerate(zip([0, 30, 60, 90], [1, .6, .3, .1], [6, 4
     cut.alpha(0)
     cut0.alpha(0)
 
-    sil = act2.silhouette(featureAngle=40).lw(lw).c('k').alpha(alpha)
+    sil = act2.silhouette(featureAngle=40).lw(lw).c('k') # .alpha(alpha)
     scene.add_vtkactor(sil)
 
     # write(cut0, 'meshes/humanbrain2_righthemisphere.obj')
