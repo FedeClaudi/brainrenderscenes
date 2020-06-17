@@ -48,8 +48,6 @@ for n, (rot, alpha, lw) in enumerate(zip([0, 30, 60, 90], [1, .6, .3, 6], [6, 4,
     scene.add_vtkactor(cut0, cut)
 
 
-
-
     act2 = merge(act, cut)
     act2.pos([0, 0, 0])
     act2.rotateX(45)
@@ -69,9 +67,9 @@ for n, (rot, alpha, lw) in enumerate(zip([0, 30, 60, 90], [1, .6, .3, 6], [6, 4,
     # write(cut, 'meshes/humanbrain2_leftthemisphere.obj')
     # write(act, 'meshes/humanbrain2_subctx.obj')
 
-    scene.render(interactive=False, zoom=1.25+.1*n, camera=cam)
-    scene.take_screenshot()
-    scene.close()
-
+    scene.render(interactive=True, zoom=1.25+.1*n, camera=cam)
+    # scene.take_screenshot()
+    # scene.close()
+    break
 
 
